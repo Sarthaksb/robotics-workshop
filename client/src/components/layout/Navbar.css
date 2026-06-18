@@ -1,0 +1,96 @@
+/* ── Navbar ─────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@500;600&display=swap');
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(6, 6, 15, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.navbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar__logo-icon { font-size: 1.5rem; line-height: 1; }
+
+.navbar__logo-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f0f4ff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.navbar__logo-accent { color: #00e5ff; margin: 0 0.15em; }
+
+/* Nav links */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navbar__link {
+  padding: 0.4rem 0.85rem;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(200, 210, 240, 0.7);
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s;
+}
+
+.navbar__link:hover {
+  color: #f0f4ff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* CTA */
+.navbar__cta {
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(135deg, #7c3aed, #0ea5e9);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 14px rgba(124, 58, 237, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.navbar__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.55);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .navbar__links { display: none; }
+  .navbar__inner { justify-content: space-between; }
+}

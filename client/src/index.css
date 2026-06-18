@@ -1,0 +1,99 @@
+/* ============================================================
+   GLOBAL RESET & BASE — AI & Robotics Summer Workshop
+   ============================================================ */
+
+/* ── Box model reset ────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Root / HTML ────────────────────────────────────────────── */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  /* Offset anchor scroll so sticky navbar doesn't cover headings */
+  scroll-padding-top: 72px;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ── Body ───────────────────────────────────────────────────── */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #05050f;
+  color: #f0f4ff;
+  line-height: 1.6;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Typography defaults ────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: #f0f4ff;
+}
+
+p { color: rgba(200, 210, 240, 0.72); }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Media defaults ─────────────────────────────────────────── */
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── Form element resets ────────────────────────────────────── */
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button { cursor: pointer; }
+
+/* ── List resets ────────────────────────────────────────────── */
+ul, ol { list-style: none; }
+
+/* ── Custom scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #05050f; }
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.3);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.55);
+}
+
+/* ── Text selection ─────────────────────────────────────────── */
+::selection {
+  background: rgba(0, 229, 255, 0.25);
+  color: #f0f4ff;
+}
+
+/* ── Focus ring ─────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #00e5ff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── #root wrapper ──────────────────────────────────────────── */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+#root main {
+  flex: 1;
+}
